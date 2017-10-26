@@ -4,6 +4,10 @@ Create a simple react app that tells the user what the weather is like on their 
 
 I have pre-written most of the stuff you mentioned you had no experience with. This means the redux stuff is already done, and the saga skeleton is already written. The base of this code is the create-react-app command line tool, so that is why there are some weird things in there.
 
+How to start the project:
+First do `yarn install`
+Then do `yarn start`
+
 Important files:
 - WeatherComponent.js: this is where the react stuff should go into
 - actions.js: these functions are redux action creators, which return simple js objects
