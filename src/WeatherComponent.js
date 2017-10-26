@@ -7,9 +7,13 @@ import { connect } from 'react-redux';
 
 
 class WeatherComponent extends Component {
+
   render() {
     return (
-      <div>Weather</div>
+      <div>
+        <h1>The weather</h1>
+
+      </div>
     );
   }
 }

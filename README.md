@@ -1,3 +1,24 @@
+# Instructions
+
+Create a simple react app that tells the user what the weather is like on their location. You will need to acquire the location and the weather seperately. The location should be acquired from the browsers location api. The weather can be obtained from openweathermap.org. Sign up for a free account there and use their API to get the weather. See https://openweathermap.org/api for more details
+
+I have pre-written most of the stuff you mentioned you had no experience with. This means the redux stuff is already done, and the saga skeleton is already written. The base of this code is the create-react-app command line tool, so that is why there are some weird things in there.
+
+Important files:
+- WeatherComponent.js: this is where the react stuff should go into
+- actions.js: these functions are redux action creators, which return simple js objects
+- reducer.js: this is the redux reducer
+- sagas.js: this is where you should create the functions that get the user location and the weather
+
+Bonus points:
+- Add error handling (like when the user does not want to share their location)
+- Do something cool
+
+Redux is used heavily in our application, so knowing how it works would be really useful, even for yourself as a React developer. If you need any information about redux or sagas, their website provide excellent documentation.
+
+
+## Create react app stuff
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -283,7 +304,7 @@ In the WebStorm menu `Run` select `Edit Configurations...`. Then click `+` and s
 
 Start your app by running `npm start`, then press `^D` on macOS or `F9` on Windows and Linux or click the green debug icon to start debugging in WebStorm.
 
-The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine. 
+The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine.
 
 ## Formatting Code Automatically
 
@@ -1769,7 +1790,7 @@ If you’re using [Apache HTTP Server](https://httpd.apache.org/), you need to c
     RewriteRule ^ index.html [QSA,L]
 ```
 
-It will get copied to the `build` folder when you run `npm run build`. 
+It will get copied to the `build` folder when you run `npm run build`.
 
 If you’re using [Apache Tomcat](http://tomcat.apache.org/), you need to follow [this Stack Overflow answer](https://stackoverflow.com/a/41249464/4878474).
 
