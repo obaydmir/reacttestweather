@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import store from './configureStore';
-import * as weatherActions from './actions';
+import store from '../../configureStore';
+import * as weatherActions from '../../actions/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-
+import WeatherInfo from "../WeatherInfo/WeatherInfo";
 
 class WeatherComponent extends Component {
+
+  // componentDidMount() {
+  //   this.props.weatherActions.getLocation();
+  //   this.props.weatherActions.getWeather();
+  // }
 
   render() {
     return (
       <div>
         <h1>The weather</h1>
-
+        <WeatherInfo weather={this.props.weather} />
       </div>
     );
   }
