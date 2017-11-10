@@ -1,6 +1,6 @@
 import {takeEvery, put, call, select} from 'redux-saga/effects';
 import * as weatherActions from './actions/actions';
-import {configs} from '../configs';
+import {configs} from './configs';
 
 import axios from 'axios';
 
@@ -49,8 +49,8 @@ function* getWeather(action) {
     });
     // console.log(location);
 
-    // const endpoint = `lon=${location.lon}&lat=${location.lat}&units=metric&APPID=${configs.open_weather_api.key}`;
-    // console.log(endpoint);
+    const endpoint = `lon=${location.lon}&lat=${location.lat}&units=metric&APPID=${configs.open_weather_api.key}`;
+    console.log(endpoint);
 
     try {
         // todo: using other resource, because of Open Weather API request limitation.
