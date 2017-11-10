@@ -1,5 +1,6 @@
 import {takeEvery, put, call, select} from 'redux-saga/effects';
 import * as weatherActions from './actions/actions';
+import {configs} from './configs';
 
 import axios from 'axios';
 
@@ -49,12 +50,13 @@ function* getWeather(action) {
     const location = yield select(state => {
         return {...state.weather.location};
     });
-    console.log(location);
+    // console.log(location);
 
-    // const endpoint = `lon=${location.lon}&lat=${location.lat}&units=metric&APPID=${appId}`;
-    // console.log(endpoint);
+    // const endpoint = `lon=${location.lon}&lat=${location.lat}&units=metric&APPID=${configs.open_weather_api.key}`;
+    console.log(endpoint);
 
     try {
+        // todo: using other resource, because of Open Weather API request limitation.
         const response = yield call(axios.get, '/todos');
         yield put(weatherActions.updateWeather(response));
     } catch (error) {
