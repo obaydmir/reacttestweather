@@ -1,18 +1,15 @@
 import {takeEvery, put, call, select} from 'redux-saga/effects';
 import * as weatherActions from './actions/actions';
-import {configs} from './configs';
+import {configs} from '../configs';
 
 import axios from 'axios';
 
 // import PouchDB from 'pouchdb-browser';
-//
 // const historyDB = new PouchDB('history');
 
 // Axios default configurations
 // axios.defaults.baseURL = "api.openweathermap.org/data/2.5/weather?"; // api.openweathermap.org/data/2.5/weather?lon=4.518168999999999&lat=51.9251602&units=metric&APPID=098e556d63530ebbcf175a7c39d994a6
 axios.defaults.baseURL = "https://jsonplaceholder.typicode.com";
-// APPID
-const appId = '098e556d63530ebbcf175a7c39d994a6';
 
 function* getLocation(action) {
     // TODO fetch location, then update state
@@ -53,7 +50,7 @@ function* getWeather(action) {
     // console.log(location);
 
     // const endpoint = `lon=${location.lon}&lat=${location.lat}&units=metric&APPID=${configs.open_weather_api.key}`;
-    console.log(endpoint);
+    // console.log(endpoint);
 
     try {
         // todo: using other resource, because of Open Weather API request limitation.
